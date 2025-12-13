@@ -55,10 +55,64 @@
         },
         "security": []
       }
+    },
+    "/user": {
+      "get": {
+        "summary": "用户",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "description": "用户ID"
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "用户名"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
     }
   },
   "components": {
-    "schemas": {},
+    "schemas": {
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "用户ID"
+          },
+          "name": {
+            "type": "string",
+            "description": "用户名"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ]
+      }
+    },
     "responses": {},
     "securitySchemes": {}
   },
